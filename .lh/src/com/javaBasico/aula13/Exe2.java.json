@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/com/javaBasico/aula13/Exe2.java",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1661784819203,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1661784819203,
+            "name": "Commit-0",
+            "content": "package aula13;\n\nimport java.util.Scanner;\n\npublic class Exe2 {\n    public static void main(String[] args) {\n        System.out.println(\"Digite um número:\");\n        Scanner scanner = new Scanner(System.in);\n        int numero = scanner.nextInt();\n\n        System.out.println(\"O númeiro digitado foi : \" + numero);\n    }\n    \n}\n"
+        }
+    ]
+}

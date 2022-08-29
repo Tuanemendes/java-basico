@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/com/javaBasico/aula13/Exe4.java",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1661784817245,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1661784817245,
+            "name": "Commit-0",
+            "content": "package aula13;\n\nimport java.util.Scanner;\n\npublic class Exe4 {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        \n        System.out.println(\"Digite nota 1:\");\n        Double nota1 = scanner.nextDouble();\n        System.out.println(\"Digite nota 2:\");\n        Double nota2 = scanner.nextDouble();\n        System.out.println(\"Digite nota 3:\");\n        Double nota3 = scanner.nextDouble();\n        System.out.println(\"Digite nota 4:\");\n        Double nota4 = scanner.nextDouble(); \n\n        Double media = (nota1 + nota2+ nota3 + nota4)/2;\n        System.out.println(\"A médias das notas é:\" + media);\n\n\n\n    }\n}\n"
+        }
+    ]
+}

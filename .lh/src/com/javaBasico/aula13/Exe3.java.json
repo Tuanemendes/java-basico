@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/com/javaBasico/aula13/Exe3.java",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1661784819203,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1661784819203,
+            "name": "Commit-0",
+            "content": "package aula13;\n\nimport java.util.Scanner;\n\npublic class Exe3 {\n    \n    public static void main(String[] args) {\n        \n        Scanner scanner = new Scanner(System.in);\n        System.out.println(\"Digite o primeiro númeiro:\");\n        Integer n1 = scanner.nextInt();\n\n        System.out.println(\"Digite o segundo numero:\");\n        Integer n2 = scanner.nextInt();\n\n        Integer result =  n1 + n2 ;\n        System.out.println(\"A soma entre os dois números é :\" + result);\n    \n    \n    }\n\n\n}\n"
+        }
+    ]
+}
