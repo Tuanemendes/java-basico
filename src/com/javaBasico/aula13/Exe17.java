@@ -1,6 +1,6 @@
 package aula13;
 
-import java.math.BigDecimal;
+
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
@@ -11,7 +11,7 @@ public class Exe17 {
     Scanner scanner = new Scanner(System.in);
     System.out.println("********* Lojas de tintas **********");
     System.out.println("------------------------------------");
-    System.out.println("Qual o valor da áre a ser pintada:" );
+    System.out.println("Qual o valor da área a ser pintada:" );
     Double areaTinta = scanner.nextDouble();
     Double metro = 6.00; 
     Double quantidadeTinta;
@@ -29,29 +29,36 @@ public class Exe17 {
     quantidadeLata = Math.ceil(quantidadeTinta/lataTinta);
     quantidadeGalao = Math.ceil(quantidadeTinta/galaoTinta);
     custoLata = Math.ceil(quantidadeLata * precoLata);
-    custoGalao = Math.ceil(quantidadeGalao *precoGalao);
+    custoGalao = Math.ceil(quantidadeGalao * precoGalao);
+
+    // mix de tintas 
     tintaFolga = quantidadeTinta * 1.1;
     quantidadeFolga = tintaFolga;
+    Double numeroLata = Math.floor( quantidadeFolga/lataTinta);
+    Double custoLataFolga = Math.floor(numeroLata * precoLata);
+    Double litrosFaltantes = quantidadeFolga % lataTinta;
+    Double numeroGalao = Math.ceil(litrosFaltantes/galaoTinta);
+    Double custoGalaoMix = numeroGalao * precoGalao;
+    Double valorTotal = custoLataFolga + custoGalaoMix;
+
+
+        System.out.println("Latas de 18 Litros: " + formatadorUnidade.format(quantidadeLata));
+        System.out.println("Custo total  para a Lata de tinta: " +formatador.format(custoLata));
+
+        System.out.println("Galão de 3,6 Litros: " + formatadorUnidade.format(quantidadeGalao));
+        System.out.println("Custo total  para o Galão de tinta: " +formatador.format(custoGalao));
     
+        System.out.println("******************************");
+        System.out.println("*******Compra otimizada*******");
+        System.out.println("******************************");
 
-        if (quantidadeTinta < lataTinta  ) {
+        System.out.println("Quantidade de Lata :" + numeroLata);
+        System.out.println("Valor Lata :" + custoLataFolga);
+        System.out.println("quantidade de galão:" + numeroGalao);
+        System.out.println("Valor Galão:" + custoGalaoMix);
 
-            System.out.println("Latas de 18 Litros: " + formatadorUnidade.format(Math.ceil(quantidadeLata)));
-            System.out.println("Custo total  para  a Lata de tinta: " +formatador.format(Math.ceil(custoLata)));
-        }else{
-
-            System.out.println("Latas de 18 Litros: " + formatadorUnidade.format(Math.ceil(quantidadeLata)));
-            System.out.println("Custo total  para a Lata de tinta: " +formatador.format(custoLata));
-        }
-        if (quantidadeTinta < galaoTinta) {
-            
-            System.out.println("Galão de 3,6 Litros: " + formatadorUnidade.format(Math.ceil(quantidadeGalao)));
-            System.out.println("Custo total  para o Galão de tinta: " +formatador.format(custoGalao));
-        } else {
-            System.out.println("Galão de 3,6 Litros: " + formatadorUnidade.format(Math.ceil(quantidadeGalao)));
-            System.out.println("Custo total  para o Galão de tinta: " +formatador.format(custoGalao));
-        }
-
+        // compra otimizada por valor 
+        System.out.println("Valor total " + valorTotal);
 
     }
 }
